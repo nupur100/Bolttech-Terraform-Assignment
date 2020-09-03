@@ -1,8 +1,10 @@
 # Simple Kubernetes Cluster via Kops
 
-## Launch the Amazon Linux EC2 instance and SSH to the server.
+### Launch the Amazon Linux EC2 instance and SSH to the server.
 
-## Install kops: kops helps you create, destroy, upgrade, and maintain production-grade, highly available, Kubernetes clusters from the command line.
+## Install kops: 
+
+kops helps you create, destroy, upgrade, and maintain production-grade, highly available, Kubernetes clusters from the command line.
 
 ```
 curl -LO https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
@@ -11,7 +13,9 @@ sudo mv kops-linux-amd64 /usr/bin/kops
 sudo echo "export PATH=$PATH:/usr/bin/kops"
 ```
 
-## Install kubectl: Kubectl is a command-line tool from Kubernetes to deploy and manage applications on Kubernetes:
+## Install kubectl: 
+
+Kubectl is a command-line tool from Kubernetes to deploy and manage applications on Kubernetes:
 
 ```
 curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
