@@ -1,4 +1,4 @@
-# Simple Kubernetes Cluster via Kops
+# Kubernetes Cluster via Kops
 
 ### Launch the Amazon Linux EC2 instance and SSH to the server.
 
