@@ -125,5 +125,8 @@ sudo kops create cluster \
 --network-cidr=${networkcidr} \
 --api-loadbalancer-type=internal \
 --ssh-public-key=~/.ssh/${clusterkey}.pub
+```
 
-``
+## To Validate your cluster:
+
+kops validate cluster --state=${KOPS_STATE_STORE}
