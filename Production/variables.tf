@@ -1,3 +1,12 @@
+variable "backend_S3_bucket" {
+    default = "lambda-serverless-python-code"
+  
+}
+
+variable "terraform_state_lock_DynamoDB" {
+    default = "terraform-lock"
+  
+}
 
 variable "ec2_count" {
     default = "1"
@@ -17,9 +26,8 @@ variable "subnet_id" {
   default = ""
 }
 
-
 variable "s3_bucket" {
-    default = "lambda-serverless-python-code"
+    default = "terraform-backend-bucket123"
   
 }
 variable "s3_key" {
@@ -78,5 +86,8 @@ variable "subnet_cidr" {
 variable "ec2_key_name"{
     default = "nupur-key-pair"
 }
+
+
+
 
 
