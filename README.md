@@ -85,7 +85,9 @@ sudo kops update cluster --name ${KOPS_CLUSTER_NAME} --state ${KOPS_STATE_STORE}
 kubectl get nodes
 ```
 
-## To create a Kubernetes Cluster on AWS EC2 instance using Existing VPC components:
+**Hurray! Our Cluster is ready to use**
+
+## To create a Kubernetes Cluster using Existing VPC components:
 
 *Prerequisites:
 Networking Components: VPC, Public and Private subnets, Route tables, Internet Gateway, Nat Gateway, Security Groups.*
