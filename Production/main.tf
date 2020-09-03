@@ -32,27 +32,11 @@ module "ec2" {
   instance_type="${var.instance_type}"
   ami_id = "${var.ami_id}"
   subnet_id = "${module.vpc.subnet_id}"
-  
 }
 
 terraform {
   backend "s3" {
-    bucket = "${var.backend_S3_bucket}"
-	dynamodb_table = "${var.terraform_state_lock_DynamoDB}"
+    bucket = "terraform-backend-bucket123"
   }
 }
 
-resource "aws_s3_bucket" "backend_S3_bucket" {
-  bucket = "${var.backend_S3_bucket}"
-}
-
-resource "aws_dynamodb_table" "terraform_state_lock" {
-  name           = "${var.terraform_state_lock_DynamoDB}"
-  read_capacity  = 5
-  write_capacity = 5
-  hash_key       = "LockID"
-  attribute {
-    name = "LockID"
-    type = "S"
-  }
-}
