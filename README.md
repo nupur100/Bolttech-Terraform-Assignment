@@ -22,6 +22,7 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s htt
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/bin/kubectl
 sudo echo "export PATH=$PATH:/usr/bin/kubectl"
+```
 
 ## Set up Kops environment variables
 
@@ -36,7 +37,9 @@ echo "export mastertype=t3.medium"
 echo "export nodetype=t3.medium"
 ```
 
-## Create an IAM role with the below permissions and assign it to the instance from where you are executing the kops commands.
+## IAM Role:
+
+Create an IAM role with the below permissions and assign it to the instance from where you are executing the kops commands.
 
 ```
 AmazonEC2FullAccess
