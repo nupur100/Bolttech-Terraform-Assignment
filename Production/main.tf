@@ -37,14 +37,17 @@ module "ec2" {
 
 terraform {
   backend "s3" {
-    bucket = "terraformstateassignment"
-    region = "ap-southeast-2"
-	dynamodb_table = "terraform-lock"
+    bucket = "${var.backend_S3_bucket}"
+	dynamodb_table = "${var.terraform_state_lock_DynamoDB}"
   }
 }
 
+resource "aws_s3_bucket" "backend_S3_bucket" {
+  bucket = "${var.backend_S3_bucket}"
+}
+
 resource "aws_dynamodb_table" "terraform_state_lock" {
-  name           = "terraform-lock"
+  name           = "${var.terraform_state_lock_DynamoDB}"
   read_capacity  = 5
   write_capacity = 5
   hash_key       = "LockID"
