@@ -85,20 +85,24 @@ sudo kops update cluster --name ${KOPS_CLUSTER_NAME} --state ${KOPS_STATE_STORE}
 kubectl get nodes
 ```
 
-*Note: To create a Kubernetes Cluster on AWS EC2 instance using Existing VPC components:
+## To create a Kubernetes Cluster on AWS EC2 instance using Existing VPC components:
 
-Prerequisites:
-Networking Components: VPC, Public and Private subnets, Route tables, Internet Gateway, Nat Gateway, Security Groups.
+*Prerequisites:
+Networking Components: VPC, Public and Private subnets, Route tables, Internet Gateway, Nat Gateway, Security Groups.*
 
 ## Add the below tags to the subnets:
 
-#Public Subnets: 
+```
+Public Subnets: 
 “kubernetes.io/cluster/kops-demo-cluster.k8s.local” = “shared” “kubernetes.io/role/elb” = “1” 
 “SubnetType” = “Utility” 
 
-#Private Subnets:
+Private Subnets:
 “kubernetes.io/cluster/kops-demo-cluster.k8s.local” = “shared” “kubernetes.io/role/internal-elb” = “1” 
 “SubnetType” = “Private”
+```
+
+## Create a Cluster Config:
 
 ```
 sudo kops create cluster \
@@ -121,7 +125,3 @@ sudo kops create cluster \
 --ssh-public-key=~/.ssh/${clusterkey}.pub
 
 ``
-
-
-
-
