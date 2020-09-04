@@ -1,13 +1,3 @@
-
-variable "s3_bucket" {
-    default = "lambda-serverless-python-code"
-  
-}
-variable "s3_key" {
-    default = "amibackup.zip"
-  
-}
-
 variable "handler" {
     default = "lambda_function.lambda_handler"
   
@@ -26,7 +16,3 @@ variable "Retention_Days" {
 }
 
 variable "lambda_role" {}
-
-
-
-
