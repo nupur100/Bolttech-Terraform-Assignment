@@ -3,7 +3,7 @@ variable "ec2_count" {
   
 }
 variable "ami_id" {
-    default = "ami-0ded330691a314693"
+    description = "AMI ID to be used for instance creation"
   
 }
 
@@ -17,11 +17,11 @@ variable "subnet_id" {
 }
 
 variable "s3_bucket" {
-    default = "terraform-lambda-zip-code"
+    description = "S3 bucket name which has zip code for lambda function"
   
 }
 variable "s3_key" {
-    default = "amibackup.zip"
+    description = "S3 zip file name to be uploaded to lambda function"
   
 }
 
@@ -31,7 +31,7 @@ variable "handler" {
 }
 
 variable "function_name" {
-  default = "amibackup-function"
+  description = "Lambda Function Name"
 }
 
 variable "runtime" {
@@ -74,13 +74,7 @@ variable "subnet_cidr" {
 }
 
 variable "ec2_key_name"{
-    default = "nupur-key-pair"
+    description = "Key pair name to be used with EC2"
 }
-
-
-
-
-
-
 
 
