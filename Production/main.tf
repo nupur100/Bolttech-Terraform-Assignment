@@ -1,12 +1,10 @@
 provider "aws" {
-    region = "ap-southeast-2" 
+    region = "${var.aws_region}" 
 }
 
 module "lambda_function" {
   source = "../modules/lambda"
   function_name = "${var.function_name}"   
-  s3_bucket = "${var.s3_bucket}"
-  s3_key    = "${var.s3_key}"
   lambda_role = "${module.iam_module.lambda_role}"
   handler = "${var.handler}"
   runtime = "${var.runtime}"   
