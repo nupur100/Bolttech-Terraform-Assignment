@@ -1,3 +1,8 @@
+variable "aws_region" {
+    description = "Enter AWS Region in which resources needs to create"
+  
+}
+
 variable "ec2_count" {
     default = "1"
   
@@ -14,15 +19,6 @@ variable "instance_type" {
 
 variable "subnet_id" {
   default = ""
-}
-
-variable "s3_bucket" {
-    description = "S3 bucket name which has zip code for lambda function"
-  
-}
-variable "s3_key" {
-    description = "S3 zip file name to be uploaded to lambda function"
-  
 }
 
 variable "handler" {
