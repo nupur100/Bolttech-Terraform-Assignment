@@ -6,7 +6,7 @@
 
 Terraform
 Backend S3 Bucket for state management should be created prior to this (Specify bucket name in 'backend' section of 'main.tf')
-S3 bucket with .zip file should be there to upload zip code to lambda function. 
+Key Pair to be used with EC2.
 
 ```
 
@@ -17,7 +17,7 @@ S3 bucket with .zip file should be there to upload zip code to lambda function.
 **VPC**: To create Custom VPC and subnet with specified CIDR range.
 **EC2**: To create EC2 in this custom VPC with specified AMI and instance type.
 **IAM**: To create IAM permissions role with custom policy for Lambda function.
-**Lambda**: To create lambda function with the zip file code along with this IAM role permissions. 
+**Lambda**: To create lambda function with the sample code along with this IAM role permissions. 
 
 ```
 
