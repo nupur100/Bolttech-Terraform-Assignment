@@ -1,15 +1,16 @@
 # Bolttech-Terraform-Assignment
 
-# Pre-requisites:
+## Pre-requisites:
 
 ```
 
 Terraform
+
 Backend S3 Bucket for state management should be created prior to this.
 
 ```
 
-# Modules Explanation:
+## Modules Explanation:
 
 ```
 
@@ -20,14 +21,15 @@ Lambda : To create lambda function with the sample code along with the above IAM
 
 ```
 
-# Executing Terraform template:
+## Executing Terraform template:
 
 ```
-You need to change backend bucket name in 'backend' section of 'Production/main.tf'
-From the Production Directory:
-terraform init
-terraform plan
-terraform apply
+1) You need to change backend bucket name in 'backend' section of 'Production/main.tf' with your created bucket name.
+
+2) From the Production Directory:
+   terraform init
+   terraform plan
+   terraform apply
 
 ```
 
