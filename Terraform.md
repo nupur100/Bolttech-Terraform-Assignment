@@ -31,7 +31,7 @@ terraform apply
 
 ```
 
-***Note: You can change the default variable values if needed in Production/variables.tf***
+***Note: If needed, you can change the default variable values in Production/variables.tf***
 
 
 
