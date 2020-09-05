@@ -5,26 +5,25 @@
 ```
 
 Terraform
-Backend S3 Bucket for state management should be created prior to this (Specify bucket name in 'backend' section of 'main.tf')
-Key Pair to be used with EC2.
+Backend S3 Bucket for state management should be created prior to this.
 
 ```
 
-# Modules:
+# Modules Explanation:
 
 ```
 
 **VPC**: To create Custom VPC and subnet with specified CIDR range.
 **EC2**: To create EC2 in this custom VPC with specified AMI and instance type.
-**IAM**: To create IAM permissions role with custom policy for Lambda function.
-**Lambda**: To create lambda function with the sample code along with this IAM role permissions. 
+**IAM**: To create IAM permissions role with defined custom policy.
+**Lambda**: To create lambda function with the sample code along with the above IAM role permissions. 
 
 ```
 
 # Executing Terraform template:
 
 ```
-
+You need to change backend bucket name in 'backend' section of 'Production/main.tf'
 From the Production Directory:
 terraform init
 terraform plan
