@@ -69,8 +69,4 @@ variable "subnet_cidr" {
   
 }
 
-variable "ec2_key_name"{
-    description = "Key pair name to be used with EC2"
-}
-
 
