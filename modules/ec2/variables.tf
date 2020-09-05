@@ -18,6 +18,7 @@ variable "subnet_id" {
 }
 
 variable "ec2_key_name"{
+  default = "test-key-pair"
 }
 
 variable "ec2_name"{
