@@ -26,7 +26,6 @@ module "vpc" {
 module "ec2" {
   source = "../modules/ec2"
   ec2_count = "${var.ec2_count}"
-  ec2_key_name = "${var.ec2_key_name}"
   instance_type="${var.instance_type}"
   ami_id = "${var.ami_id}"
   subnet_id = "${module.vpc.subnet_id}"
