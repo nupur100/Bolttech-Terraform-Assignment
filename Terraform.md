@@ -13,10 +13,10 @@ Backend S3 Bucket for state management should be created prior to this.
 
 ```
 
-**VPC**: To create Custom VPC and subnet with specified CIDR range.
-**EC2**: To create EC2 in this custom VPC with specified AMI and instance type.
-**IAM**: To create IAM permissions role with defined custom policy.
-**Lambda**: To create lambda function with the sample code along with the above IAM role permissions. 
+VPC : To create Custom VPC and subnet with specified CIDR range.
+EC2 : To create EC2 in this custom VPC with specified AMI and instance type.
+IAM : To create IAM permissions role with defined custom policy.
+Lambda : To create lambda function with the sample code along with the above IAM role permissions. 
 
 ```
 
